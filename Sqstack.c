@@ -12,7 +12,7 @@ typedef struct
 }Sqstack;
 
 Sqstack Initstack(Sqstack s){
-    s.base=(int *)malloc(sizeof(int));
+    s.base=(int *)malloc(sizeof(int)*Stackinitsize);
     if(!s.base)exit(0);
     s.top=s.base;
     s.stacksize=Stackinitsize;
